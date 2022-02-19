@@ -12,6 +12,7 @@ namespace equiposWebApi.Controllers
     [ApiController]
     public class equiposController : ControllerBase
     {
+        //Mi primer controlador
         //Configurar mi variable de conexion al contexto db
         private readonly prestamosContext _contexto;
 
@@ -21,7 +22,7 @@ namespace equiposWebApi.Controllers
         }
         
         [HttpGet]
-        [Route("api/equipos")]
+        [Route("api/equipos/{idUsuarios}")]
         public IActionResult Get(int idUsuario)
         {
             IEnumerable<equipos> equiposList = (from e in _contexto.equipos
